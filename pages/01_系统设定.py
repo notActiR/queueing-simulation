@@ -5,13 +5,13 @@
 import streamlit as st
 import numpy as np
 
-st.set_page_config(page_title="系统设定", page_icon="⚙️", layout="wide")
+st.set_page_config(page_title="系统设定", page_icon="", layout="wide")
 
 # 从 URL 查询参数获取全局设定或使用默认值
 lam = st.session_state.get('lam', 0.7)
 mu = st.session_state.get('mu', 1.0)
 
-st.title("⚙️ 第一章：系统设定 — 搭建我们的服务器")
+st.title("第一章：系统设定 — 搭建我们的服务器")
 
 st.markdown("""
 在开始仿真之前，让我们先理解 M/E₂/1 排队系统的基本构成。

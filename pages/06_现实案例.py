@@ -8,9 +8,9 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 from simulation.engine import ME2Queue
 
-st.set_page_config(page_title="现实案例", page_icon="🏥", layout="wide")
+st.set_page_config(page_title="现实案例", page_icon="", layout="wide")
 
-st.title("🏥 第六章：现实案例 — 医院门诊挂号排队")
+st.title("第六章：现实案例 — 医院门诊挂号排队")
 
 # ---- 场景引入 ----
 st.markdown("---")
@@ -61,7 +61,7 @@ with col_diagram:
 
 # ---- 参数设置 ----
 st.markdown("---")
-st.markdown("## ⚙️ 场景参数设置")
+st.markdown("## 场景参数设置")
 
 st.markdown("""
 真实数据参考：某三甲医院门诊挂号窗口，早高峰 7:30-9:30 期间：
@@ -113,7 +113,7 @@ result = sim.run(n_patients)
 
 # ---- 关键指标 ----
 st.markdown("---")
-st.markdown("## 📊 仿真结果")
+st.markdown("## 仿真结果")
 
 c1, c2, c3, c4 = st.columns(4)
 with c1:
@@ -133,7 +133,7 @@ with c4:
 
 # ---- 对比图 ----
 st.markdown("---")
-st.markdown("## 📈 排队等待时间分析")
+st.markdown("## 排队等待时间分析")
 
 fig = make_subplots(
     rows=1, cols=2,
@@ -200,7 +200,7 @@ st.plotly_chart(fig, use_container_width=True)
 
 # ---- 场景解读 ----
 st.markdown("---")
-st.markdown("## 💡 场景解读")
+st.markdown("## 场景解读")
 
 # 统计等待时间分布
 pct_under_3 = np.mean(wait_minutes < 3) * 100
@@ -211,7 +211,7 @@ col1, col2 = st.columns(2)
 
 with col1:
     st.markdown(f"""
-    ### 📋 患者体验分析
+    ### 患者体验分析
 
     | 指标 | 数值 |
     |------|------|
@@ -226,7 +226,7 @@ with col1:
 
 with col2:
     st.markdown(rf"""
-    ### 🔗 与 M/E₂/1 模型的对应
+    ### 与 M/E₂/1 模型的对应
 
     | 排队论概念 | 医院挂号场景 |
     |-----------|-------------|
@@ -244,7 +244,7 @@ with col2:
 
 # ---- 优化建议 ----
 st.markdown("---")
-st.markdown("## 🔧 优化建议")
+st.markdown("## 优化建议")
 
 col1, col2 = st.columns(2)
 
@@ -276,7 +276,7 @@ with col2:
 
 # ---- 总结 ----
 st.markdown("---")
-st.markdown("## 📝 小结")
+st.markdown("## 小结")
 
 st.markdown(f"""
 通过这个医院挂号案例，我们看到排队论模型如何指导现实决策：

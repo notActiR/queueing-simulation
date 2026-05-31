@@ -60,7 +60,7 @@ with st.sidebar:
 
     st.divider()
 
-    st.markdown("### ⚙️ 全局参数")
+    st.markdown("### 全局参数")
     lam = st.slider("到达率 λ", 0.1, 5.0, 0.7, 0.1,
                     help="单位时间到达的任务平均数")
     mu = st.slider("服务率 μ", 0.5, 8.0, 1.0, 0.1,

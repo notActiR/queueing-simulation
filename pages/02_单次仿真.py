@@ -87,7 +87,7 @@ with c5:
 st.markdown("---")
 col_left, col_right = st.columns([1, 2])
 with col_left:
-    st.markdown("### ⏳ 等待时间分布")
+    st.markdown("### 等待时间分布")
     hist_fig = build_wait_histogram(result, max_customers=min(n_customers, 500))
     st.plotly_chart(hist_fig, use_container_width=True)
 
